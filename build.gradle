@@ -1,0 +1,23 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.fxzou'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://build.shibboleth.net/nexus/content/repositories/releases'
+    }
+}
+
+dependencies {
+    implementation 'org.pac4j:pac4j-saml:4.0.0-RC1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
